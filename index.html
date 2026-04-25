@@ -4,163 +4,632 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vignesh Prabu | Web Analyst & Developer Portfolio</title>
-  <meta property="og:title" content="Vignesh Prabu | Web Analyst & Developer Portfolio">
-  <meta name="twitter:title" content="Vignesh Prabu | Web Analyst & Developer Portfolio">
+
   <!-- Basic SEO -->
   <meta name="description" content="Portfolio of Vignesh Prabu — Web Analyst & Developer creating data-driven digital experiences.">
   <meta name="author" content="Vignesh Prabu">
-  <meta name="keywords" content="Vignesh Prabu, Analytics, Web Tracking, GA4, Firebase, DataLayer, Portfolio, Developer">
+  <meta name="keywords" content="Vignesh Prabu, Analytics, Web Tracking, GA4, Firebase, DataLayer, GTM, Portfolio, Developer">
 
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180x180.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 
-  <!-- Open Graph (for LinkedIn, Facebook, etc.) -->
-  <meta property="og:title" content="Vignesh Prabu | Portfolio">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Vignesh Prabu | Web Analyst & Developer Portfolio">
   <meta property="og:description" content="Discover projects and analytics work by Vignesh Prabu — transforming insights into impactful digital experiences.">
   <meta property="og:url" content="https://vigneshprabu.com/">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="https://vigneshprabu.com/favicon-180x180.png">
-  <meta property="og:image:alt" content="Vignesh Prabu logo">
-
-  <!-- OG image tags -->
   <meta property="og:image" content="https://vigneshprabu.com/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Vignesh Prabu - Web Analyst & Developer Portfolio">
-  <meta name="twitter:image" content="https://vigneshprabu.com/og-image.png">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Vignesh Prabu | Portfolio">
+  <meta name="twitter:title" content="Vignesh Prabu | Web Analyst & Developer Portfolio">
   <meta name="twitter:description" content="Web Analyst & Developer | Data-driven portfolio showcasing analytics and tech work.">
-  <meta name="twitter:image" content="https://vigneshprabu.com/favicon-180x180.png">
+  <meta name="twitter:image" content="https://vigneshprabu.com/og-image.png">
 
-<!-- Theme color for mobile browsers -->
-<meta name="theme-color" content="#0078ff">
+  <meta name="theme-color" content="#0078ff">
+
+  <!-- Inter font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Inter', sans-serif; background: var(--bg-color); color: var(--text-color); line-height: 1.6; transition: background 0.3s ease, color 0.3s ease; }
-    header { display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 10%; background: var(--header-bg); box-shadow: 0 1px 3px rgba(0,0,0,0.1); position: sticky; top: 0; }
-    nav a { margin-left: 1.5rem; text-decoration: none; color: var(--text-color); font-weight: 500; }
-    nav a:hover { color: #0078ff; }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
-    .hero { text-align: center; padding: 8rem 10%; background: var(--hero-bg); }
-    .hero h1 { font-size: 3rem; margin-bottom: 1rem; }
-    .hero p { font-size: 1.2rem; color: var(--secondary-text); }
-    .btn-primary { margin-top: 2rem; padding: 0.8rem 1.5rem; background: #0078ff; color: #fff; border: none; border-radius: 6px; cursor: pointer; }
-    .btn-primary:hover { background: #005fcc; }
-
-    section { padding: 5rem 10%; }
-    h2 { font-size: 2rem; margin-bottom: 2rem; text-align: center; }
-
-    .about, .contact { max-width: 800px; margin: auto; text-align: center; }
-
-    .projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
-    .project-card { background: var(--card-bg); padding: 2rem; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); transition: transform 0.2s ease, background 0.3s ease; }
-    .project-card:hover { transform: translateY(-5px); }
-    .project-card h3 { margin-bottom: 1rem; }
-
-    footer { text-align: center; padding: 2rem; background: var(--header-bg); color: var(--secondary-text); margin-top: 3rem; }
-
-    .theme-toggle { cursor: pointer; padding: 0.5rem 1rem; border: 1px solid var(--text-color); border-radius: 5px; background: none; color: var(--text-color); transition: all 0.3s ease; }
-    .theme-toggle:hover { background: var(--text-color); color: var(--bg-color); }
+    html { scroll-behavior: smooth; }
 
     :root {
-      --bg-color: #f9fafb;
-      --text-color: #111;
-      --secondary-text: #555;
+      --bg: #f9fafb;
+      --text: #111;
+      --text-muted: #555;
       --card-bg: #fff;
-      --header-bg: #fff;
-      --hero-bg: linear-gradient(135deg, #fff, #f0f4ff);
+      --header-bg: rgba(255,255,255,0.9);
+      --hero-bg: linear-gradient(135deg, #fff 0%, #f0f4ff 100%);
+      --border: #e5e7eb;
+      --accent: #0078ff;
+      --accent-dark: #005fcc;
+      --tag-bg: #eff6ff;
+      --tag-text: #1d4ed8;
     }
 
-    body.dark-mode {
-      --bg-color: #0d1117;
-      --text-color: #e6edf3;
-      --secondary-text: #9ba1a6;
+    body.dark {
+      --bg: #0d1117;
+      --text: #e6edf3;
+      --text-muted: #8b949e;
       --card-bg: #161b22;
-      --header-bg: #161b22;
-      --hero-bg: linear-gradient(135deg, #161b22, #0d1117);
+      --header-bg: rgba(22,27,34,0.95);
+      --hero-bg: linear-gradient(135deg, #161b22 0%, #0d1117 100%);
+      --border: #30363d;
+      --tag-bg: #1c2432;
+      --tag-text: #58a6ff;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    /* ── Header ── */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 8%;
+      background: var(--header-bg);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      transition: background 0.3s, border-color 0.3s;
+    }
+
+    .logo {
+      font-size: 1.1rem;
+      font-weight: 700;
+      letter-spacing: -0.3px;
+    }
+
+    .logo span { color: var(--accent); }
+
+    nav { display: flex; align-items: center; gap: 0.25rem; }
+
+    nav a {
+      padding: 0.4rem 0.75rem;
+      text-decoration: none;
+      color: var(--text-muted);
+      font-weight: 500;
+      font-size: 0.9rem;
+      border-radius: 6px;
+      transition: color 0.2s, background 0.2s;
+    }
+
+    nav a:hover { color: var(--accent); background: var(--tag-bg); }
+
+    .header-right { display: flex; align-items: center; gap: 0.75rem; }
+
+    .theme-toggle {
+      cursor: pointer;
+      padding: 0.4rem 0.75rem;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: none;
+      color: var(--text);
+      font-size: 0.85rem;
+      font-family: inherit;
+      transition: all 0.2s;
+      white-space: nowrap;
+    }
+
+    .theme-toggle:hover { background: var(--card-bg); }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 4px;
+      background: none;
+      border: none;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--text);
+      border-radius: 2px;
+      transition: all 0.3s;
+    }
+
+    .mobile-nav {
+      display: none;
+      position: fixed;
+      top: 60px;
+      left: 0;
+      right: 0;
+      background: var(--header-bg);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 1rem 8%;
+      flex-direction: column;
+      gap: 0.25rem;
+      z-index: 99;
+    }
+
+    .mobile-nav.open { display: flex; }
+    .mobile-nav a { padding: 0.6rem 0.75rem; color: var(--text-muted); text-decoration: none; font-weight: 500; border-radius: 6px; }
+    .mobile-nav a:hover { color: var(--accent); background: var(--tag-bg); }
+
+    /* ── Hero ── */
+    .hero {
+      text-align: center;
+      padding: 7rem 8% 6rem;
+      background: var(--hero-bg);
+      transition: background 0.3s;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: var(--tag-bg);
+      color: var(--tag-text);
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 0.3rem 0.9rem;
+      border-radius: 99px;
+      margin-bottom: 1.5rem;
+      letter-spacing: 0.3px;
+    }
+
+    .hero h1 {
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 700;
+      letter-spacing: -1px;
+      margin-bottom: 1rem;
+    }
+
+    .hero h1 .name { color: var(--accent); }
+
+    .hero-role {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      margin-bottom: 0.75rem;
+      min-height: 1.6em;
+    }
+
+    .cursor {
+      display: inline-block;
+      width: 2px;
+      height: 1em;
+      background: var(--accent);
+      margin-left: 2px;
+      vertical-align: middle;
+      animation: blink 1s step-end infinite;
+    }
+
+    @keyframes blink { 0%,100% { opacity: 1; } 50% { opacity: 0; } }
+
+    .hero-sub { font-size: 1rem; color: var(--text-muted); max-width: 500px; margin: 0 auto 2.5rem; }
+
+    .hero-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+    .btn-primary {
+      padding: 0.75rem 1.6rem;
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      font-family: inherit;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      transition: background 0.2s, transform 0.1s;
+    }
+
+    .btn-primary:hover { background: var(--accent-dark); transform: translateY(-1px); }
+
+    .btn-secondary {
+      padding: 0.75rem 1.6rem;
+      background: transparent;
+      color: var(--text);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      font-family: inherit;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      transition: background 0.2s, transform 0.1s;
+    }
+
+    .btn-secondary:hover { background: var(--card-bg); transform: translateY(-1px); }
+
+    /* ── Sections ── */
+    section { padding: 5rem 8%; }
+
+    .section-label {
+      text-align: center;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+    }
+
+    h2 {
+      font-size: clamp(1.6rem, 3vw, 2.1rem);
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    /* ── About ── */
+    .about-inner {
+      max-width: 700px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .about-inner p {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+      line-height: 1.8;
+    }
+
+    /* ── Skills ── */
+    #skills { background: var(--card-bg); transition: background 0.3s; }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .skill-group h3 { font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted); margin-bottom: 0.75rem; }
+
+    .tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+
+    .tag {
+      background: var(--tag-bg);
+      color: var(--tag-text);
+      font-size: 0.82rem;
+      font-weight: 500;
+      padding: 0.3rem 0.7rem;
+      border-radius: 6px;
+      transition: background 0.2s;
+    }
+
+    /* ── Projects ── */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .project-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      padding: 1.75rem;
+      border-radius: 12px;
+      transition: transform 0.2s, box-shadow 0.2s, background 0.3s, border-color 0.3s;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .project-card:hover { transform: translateY(-4px); box-shadow: 0 8px 30px rgba(0,0,0,0.08); }
+
+    body.dark .project-card:hover { box-shadow: 0 8px 30px rgba(0,0,0,0.3); }
+
+    .project-card h3 { font-size: 1.1rem; font-weight: 600; margin-bottom: 0.6rem; }
+    .project-card p { color: var(--text-muted); font-size: 0.92rem; line-height: 1.7; flex: 1; margin-bottom: 1.25rem; }
+
+    .project-footer { display: flex; align-items: center; justify-content: space-between; }
+
+    .project-tags { display: flex; gap: 0.4rem; flex-wrap: wrap; }
+
+    .project-link {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--accent);
+      text-decoration: none;
+      white-space: nowrap;
+      transition: opacity 0.2s;
+    }
+
+    .project-link:hover { opacity: 0.75; }
+
+    /* ── Contact ── */
+    #contact { background: var(--card-bg); transition: background 0.3s; }
+
+    .contact-inner {
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .contact-inner p { color: var(--text-muted); font-size: 1rem; margin-bottom: 2rem; line-height: 1.8; }
+
+    .contact-links { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+    .contact-link {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.65rem 1.25rem;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      text-decoration: none;
+      color: var(--text);
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: background 0.2s, border-color 0.2s, transform 0.1s;
+    }
+
+    .contact-link:hover { background: var(--tag-bg); border-color: var(--accent); color: var(--accent); transform: translateY(-1px); }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      padding: 2rem 8%;
+      border-top: 1px solid var(--border);
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      transition: border-color 0.3s;
+    }
+
+    /* ── Scroll animations ── */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.55s ease, transform 0.55s ease;
+    }
+
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 640px) {
+      nav { display: none; }
+      .hamburger { display: flex; }
+      header { padding: 1rem 6%; }
+      .hero { padding: 5rem 6% 4rem; }
+      section { padding: 4rem 6%; }
+      .hero-actions { flex-direction: column; align-items: center; }
+      .btn-primary, .btn-secondary { width: 100%; max-width: 260px; text-align: center; }
     }
   </style>
 </head>
 <body>
+
   <header>
-    <div class="logo"><strong>Vignesh</strong></div>
+    <div class="logo">Vignesh<span>.</span></div>
     <nav>
       <a href="#about">About</a>
+      <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
     </nav>
-    <button class="theme-toggle" id="themeToggle">🌙 Dark Mode</button>
+    <div class="header-right">
+      <button class="theme-toggle" id="themeToggle">🌙 Dark</button>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </header>
 
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <!-- Hero -->
   <section class="hero">
-    <h1>Hi, I'm Vignesh Prabu 👋</h1>
-    <p>A passionate web analyst & developer creating meaningful digital experiences.</p>
-    <button class="btn-primary">View My Work</button>
+    <div class="hero-badge">Open to opportunities</div>
+    <h1>Hi, I'm <span class="name">Vignesh Prabu</span></h1>
+    <p class="hero-role" id="heroRole"><span id="typedText"></span><span class="cursor"></span></p>
+    <p class="hero-sub">Turning analytics data into decisions — building clean tracking architectures and meaningful digital experiences.</p>
+    <div class="hero-actions">
+      <a href="#projects" class="btn-primary">View My Work</a>
+      <a href="#contact" class="btn-secondary">Get in Touch</a>
+    </div>
   </section>
 
-  <section id="about" class="about">
-    <h2>About Me</h2>
-    <p>I'm a data-driven web specialist focused on analytics, optimization, and tracking. I love turning insights into impactful experiences. This is a placeholder — your personal bio will go here later.</p>
+  <!-- About -->
+  <section id="about">
+    <p class="section-label">About</p>
+    <h2>Who I Am</h2>
+    <div class="about-inner fade-up">
+      <p>I'm a web analyst and developer with a deep focus on digital analytics — designing tracking architectures, managing data layers, and helping teams understand their users through reliable, clean data.</p>
+      <p>My work sits at the intersection of engineering and analytics: I speak both the language of developers and the language of business. Whether it's migrating a product from Universal Analytics to GA4, building a Firebase event taxonomy, or debugging a broken tag — I've got it covered.</p>
+    </div>
   </section>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="projects">
-      <div class="project-card">
-        <h3>DataLayer Relay</h3>
-        <p>A custom client-side data relay solution improving event reliability and tag execution timing.</p>
+  <!-- Skills -->
+  <section id="skills">
+    <p class="section-label">Expertise</p>
+    <h2>Skills & Tools</h2>
+    <div class="skills-grid fade-up">
+      <div class="skill-group">
+        <h3>Analytics</h3>
+        <div class="tags">
+          <span class="tag">GA4</span>
+          <span class="tag">Universal Analytics</span>
+          <span class="tag">Firebase Analytics</span>
+          <span class="tag">Looker Studio</span>
+        </div>
       </div>
-      <div class="project-card">
-        <h3>GA4 Migration Toolkit</h3>
-        <p>Assisted in seamless migration from Universal Analytics to Google Analytics 4 across multiple products.</p>
+      <div class="skill-group">
+        <h3>Tag Management</h3>
+        <div class="tags">
+          <span class="tag">Google Tag Manager</span>
+          <span class="tag">DataLayer</span>
+          <span class="tag">Event Tracking</span>
+          <span class="tag">Server-side GTM</span>
+        </div>
       </div>
-      <div class="project-card">
-        <h3>Firebase App Tracking</h3>
-        <p>Developed and optimized app event tracking architecture using Firebase Analytics.</p>
+      <div class="skill-group">
+        <h3>Development</h3>
+        <div class="tags">
+          <span class="tag">JavaScript</span>
+          <span class="tag">HTML & CSS</span>
+          <span class="tag">Python</span>
+          <span class="tag">SQL</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h3>Data & Cloud</h3>
+        <div class="tags">
+          <span class="tag">BigQuery</span>
+          <span class="tag">Segment</span>
+          <span class="tag">Amplitude</span>
+          <span class="tag">GCP</span>
+        </div>
       </div>
     </div>
   </section>
 
-  <section id="contact" class="contact">
-    <h2>Contact</h2>
-    <p>Let's connect! You can reach me via email at <a href="mailto:example@email.com">example@email.com</a>.</p>
+  <!-- Projects -->
+  <section id="projects">
+    <p class="section-label">Work</p>
+    <h2>Projects</h2>
+    <div class="projects-grid">
+
+      <div class="project-card fade-up">
+        <h3>DataLayer Relay</h3>
+        <p>A custom client-side data relay solution that improves event reliability and tag execution timing — reducing data loss on slow connections and SPA navigation events.</p>
+        <div class="project-footer">
+          <div class="project-tags">
+            <span class="tag">JavaScript</span>
+            <span class="tag">GTM</span>
+          </div>
+          <a href="#" class="project-link">View →</a>
+        </div>
+      </div>
+
+      <div class="project-card fade-up">
+        <h3>GA4 Migration Toolkit</h3>
+        <p>Led the migration from Universal Analytics to GA4 across multiple products — including event schema redesign, custom dimensions mapping, and stakeholder reporting dashboards.</p>
+        <div class="project-footer">
+          <div class="project-tags">
+            <span class="tag">GA4</span>
+            <span class="tag">BigQuery</span>
+          </div>
+          <a href="#" class="project-link">View →</a>
+        </div>
+      </div>
+
+      <div class="project-card fade-up">
+        <h3>Firebase App Tracking</h3>
+        <p>Developed and optimized an app event tracking architecture using Firebase Analytics — creating a scalable event taxonomy and integrating with BigQuery for advanced analysis.</p>
+        <div class="project-footer">
+          <div class="project-tags">
+            <span class="tag">Firebase</span>
+            <span class="tag">BigQuery</span>
+          </div>
+          <a href="#" class="project-link">View →</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <p class="section-label">Contact</p>
+    <h2>Get In Touch</h2>
+    <div class="contact-inner fade-up">
+      <p>Whether you're looking to improve your analytics setup, need a tracking audit, or just want to connect — my inbox is open.</p>
+      <div class="contact-links">
+        <a href="mailto:remora.vicky@gmail.com" class="contact-link">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 7L2 7"/></svg>
+          Email Me
+        </a>
+        <a href="https://linkedin.com/in/vigneshprabu" target="_blank" rel="noopener" class="contact-link">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          LinkedIn
+        </a>
+        <a href="https://github.com/vigneshprabu" target="_blank" rel="noopener" class="contact-link">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          GitHub
+        </a>
+      </div>
+    </div>
   </section>
 
   <footer>
-    <p>© 2025 Vignesh Prabu. All rights reserved.</p>
+    <p>© <span id="year"></span> Vignesh Prabu. Built with care.</p>
   </footer>
 
   <script>
+    // ── Dark mode ──
     const toggle = document.getElementById('themeToggle');
+    const setDark = (on) => {
+      document.body.classList.toggle('dark', on);
+      toggle.textContent = on ? '☀️ Light' : '🌙 Dark';
+    };
 
-    // Detect system preference
-    const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
-    if (prefersDarkScheme.matches) {
-      document.body.classList.add('dark-mode');
-      toggle.textContent = '☀️ Light Mode';
-    }
+    const mq = window.matchMedia('(prefers-color-scheme: dark)');
+    setDark(mq.matches);
+    mq.addEventListener('change', e => setDark(e.matches));
+    toggle.addEventListener('click', () => setDark(!document.body.classList.contains('dark')));
 
-    // Listen to system changes
-    prefersDarkScheme.addEventListener('change', (e) => {
-      if (e.matches) {
-        document.body.classList.add('dark-mode');
-        toggle.textContent = '☀️ Light Mode';
+    // ── Mobile nav ──
+    const hamburger = document.getElementById('hamburger');
+    const mobileNav = document.getElementById('mobileNav');
+    hamburger.addEventListener('click', () => mobileNav.classList.toggle('open'));
+    mobileNav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileNav.classList.remove('open')));
+
+    // ── Typewriter ──
+    const roles = [
+      'Web Analyst & Developer',
+      'Analytics Engineer',
+      'GA4 & Firebase Specialist',
+      'DataLayer Architect',
+    ];
+    let ri = 0, ci = 0, deleting = false;
+    const el = document.getElementById('typedText');
+
+    function type() {
+      const word = roles[ri];
+      if (!deleting) {
+        el.textContent = word.slice(0, ++ci);
+        if (ci === word.length) { deleting = true; setTimeout(type, 1800); return; }
       } else {
-        document.body.classList.remove('dark-mode');
-        toggle.textContent = '🌙 Dark Mode';
+        el.textContent = word.slice(0, --ci);
+        if (ci === 0) { deleting = false; ri = (ri + 1) % roles.length; }
       }
-    });
+      setTimeout(type, deleting ? 50 : 80);
+    }
+    type();
 
-    // Manual toggle
-    toggle.addEventListener('click', () => {
-      document.body.classList.toggle('dark-mode');
-      toggle.textContent = document.body.classList.contains('dark-mode') ? '☀️ Light Mode' : '🌙 Dark Mode';
-    });
+    // ── Scroll fade-in ──
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+
+    // ── Footer year ──
+    document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
